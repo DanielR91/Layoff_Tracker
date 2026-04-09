@@ -99,7 +99,7 @@ function applyFilters() {
     else if (state.period === 12) cutoff.setMonth(now.getMonth() - 12);
     else if (state.period === 24) cutoff.setMonth(now.getMonth() - 24);
 
-    filteredData = layoffData.filter(item => {
+    const baseFiltered = layoffData.filter(item => {
         const itemDate = new Date(item.date);
         const matchesDate = itemDate >= cutoff;
         const matchesSearch = item.company.toLowerCase().includes(state.search);
@@ -107,27 +107,36 @@ function applyFilters() {
         return matchesDate && matchesSearch && matchesIndustry;
     });
 
-    // Sort
-    filteredData.sort((a, b) => {
+    // Split into Confirmed (layoffs > 0) and News (layoffs == 0)
+    const confirmedItems = baseFiltered.filter(d => d.layoffs > 0);
+    const newsItems = baseFiltered.filter(d => d.layoffs === 0);
+
+    // Sort Confirmed
+    confirmedItems.sort((a, b) => {
         if (state.sortBy === 'date') return new Date(b.date) - new Date(a.date);
         if (state.sortBy === 'amount') return b.layoffs - a.layoffs;
         return 0;
     });
 
-    state.visibleCount = 20; // Reset pagination on filter
-    renderStats();
-    renderTable();
-    updateChart();
+    // Sort News (always by date)
+    newsItems.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    state.visibleCount = 20; // Reset pagination
+    
+    renderStats(confirmedItems);
+    renderTable(confirmedItems);
+    renderNewsFeed(newsItems);
+    updateChart(confirmedItems);
 }
 
-function renderStats() {
-    const total = filteredData.reduce((sum, item) => sum + item.layoffs, 0);
-    const uniqueCompanies = new Set(filteredData.map(d => d.company)).size;
-    const largest = filteredData.length > 0 ? Math.max(...filteredData.map(d => d.layoffs)) : 0;
+function renderStats(data) {
+    const total = data.reduce((sum, item) => sum + item.layoffs, 0);
+    const uniqueCompanies = new Set(data.map(d => d.company)).size;
+    const largest = data.length > 0 ? Math.max(...data.map(d => d.layoffs)) : 0;
     
     // Find most affected industry
     const indCount = {};
-    filteredData.forEach(d => indCount[d.industry] = (indCount[d.industry] || 0) + d.layoffs);
+    data.forEach(d => indCount[d.industry] = (indCount[d.industry] || 0) + d.layoffs);
     const topIndustry = Object.entries(indCount).sort((a,b) => b[1]-a[1])[0]?.[0] || 'N/A';
 
     const container = document.getElementById('statsContainer');
@@ -155,9 +164,9 @@ function renderStats() {
     `;
 }
 
-function renderTable() {
+function renderTable(data) {
     const tbody = document.getElementById('layoffBody');
-    const displayData = filteredData.slice(0, state.visibleCount);
+    const displayData = data.slice(0, state.visibleCount);
     
     tbody.innerHTML = displayData.map(item => `
         <tr>
@@ -177,28 +186,49 @@ function renderTable() {
         loadMoreBtn = document.createElement('button');
         loadMoreBtn.id = 'loadMoreBtn';
         loadMoreBtn.className = 'glass load-more-btn';
-        // Insert after the table container
-        document.querySelector('.list-section').appendChild(loadMoreBtn);
+        document.getElementById('confirmedSection').appendChild(loadMoreBtn);
         loadMoreBtn.addEventListener('click', () => {
             state.visibleCount += 50;
-            renderTable();
+            renderTable(data);
         });
     }
     
-    if (state.visibleCount >= filteredData.length) {
+    if (state.visibleCount >= data.length) {
         loadMoreBtn.style.display = 'none';
     } else {
         loadMoreBtn.style.display = 'block';
-        loadMoreBtn.textContent = `Load More (${filteredData.length - state.visibleCount} remaining)`;
+        loadMoreBtn.textContent = `Load More (${data.length - state.visibleCount} remaining)`;
     }
 }
 
-function updateChart() {
+function renderNewsFeed(data) {
+    const feed = document.getElementById('newsFeed');
+    if (data.length === 0) {
+        feed.innerHTML = '<div class="news-item" style="text-align: center; color: var(--text-secondary)">No recent rumors found.</div>';
+        return;
+    }
+
+    // Only show top 10 news items for density
+    feed.innerHTML = data.slice(0, 10).map(item => `
+        <div class="news-item">
+            <div class="news-meta">
+                <span class="news-tag">${item.industry}</span>
+                <span>${new Date(item.date).toLocaleDateString()}</span>
+            </div>
+            <h4>${item.company} layoffs reported</h4>
+            <div class="news-meta">
+                <a href="${item.source}" target="_blank" class="source-link">Read Full Article</a>
+            </div>
+        </div>
+    `).join('');
+}
+
+function updateChart(data) {
     const ctx = document.getElementById('trendChart').getContext('2d');
     
-    // Aggregate by month for the chart
+    // Aggregate by month
     const dataByMonth = {};
-    filteredData.forEach(d => {
+    data.forEach(d => {
         const month = d.date.substring(0, 7); // YYYY-MM
         dataByMonth[month] = (dataByMonth[month] || 0) + d.layoffs;
     });

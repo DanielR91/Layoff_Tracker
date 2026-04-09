@@ -92,34 +92,51 @@
                     </div>
                 </section>
 
-                <!-- List Section -->
-                <section class="list-section glass">
-                    <div class="section-header">
-                        <h2>Recent Announcements</h2>
-                        <div class="sort-controls">
-                            <span>Sort by:</span>
-                            <select id="sortBy">
-                                <option value="date">Date</option>
-                                <option value="amount">Amount</option>
-                            </select>
+                <!-- Data & News Split -->
+                <div class="split-layout">
+                    <!-- Confirmed Section -->
+                    <section class="list-section glass" id="confirmedSection">
+                        <div class="section-header">
+                            <div>
+                                <h2>Confirmed Redundancies</h2>
+                                <p class="section-subtitle">Data-verified events with reported counts</p>
+                            </div>
+                            <div class="sort-controls">
+                                <span>Sort:</span>
+                                <select id="sortBy">
+                                    <option value="date">Date</option>
+                                    <option value="amount">Amount</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="table-container">
-                        <table id="layoffTable">
-                            <thead>
-                                <tr>
-                                    <th>Company</th>
-                                    <th>Date</th>
-                                    <th>Layoffs</th>
-                                    <th>Source</th>
-                                </tr>
-                            </thead>
-                            <tbody id="layoffBody">
-                                <!-- Data rows will be injected here -->
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+                        <div class="table-container">
+                            <table id="layoffTable">
+                                <thead>
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Date</th>
+                                        <th>Layoffs</th>
+                                        <th>Source</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="layoffBody"></tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- News Section -->
+                    <section class="news-section glass" id="newsSection">
+                        <div class="section-header">
+                            <div>
+                                <h2>News & Rumors</h2>
+                                <p class="section-subtitle">Articles without confirmed totals</p>
+                            </div>
+                        </div>
+                        <div class="news-feed" id="newsFeed">
+                            <!-- News snippets will be injected here -->
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </main>
