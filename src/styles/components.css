@@ -178,15 +178,27 @@ tr:hover td {
 
 /* Data & News Split Layout */
 .split-layout {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  display: flex;
   gap: 24px;
   align-items: start;
 }
 
-@media (max-width: 1024px) {
+.split-layout > .list-section {
+  flex: 1.5;
+  min-width: 0; /* Prevent table overflow */
+}
+
+.split-layout > .news-section {
+  flex: 1;
+  min-width: 320px;
+}
+
+@media (max-width: 1280px) {
   .split-layout {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .split-layout > .news-section {
+    width: 100%;
   }
 }
 

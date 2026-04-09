@@ -107,9 +107,9 @@ function applyFilters() {
         return matchesDate && matchesSearch && matchesIndustry;
     });
 
-    // Split into Confirmed (layoffs > 0) and News (layoffs == 0)
-    const confirmedItems = baseFiltered.filter(d => d.layoffs > 0);
-    const newsItems = baseFiltered.filter(d => d.layoffs === 0);
+    // Split into Confirmed (layoffs > 0) and news (layoffs <= 0 or null)
+    const confirmedItems = baseFiltered.filter(d => d.layoffs && Number(d.layoffs) > 0);
+    const newsItems = baseFiltered.filter(d => !d.layoffs || Number(d.layoffs) <= 0);
 
     // Sort Confirmed
     confirmedItems.sort((a, b) => {
