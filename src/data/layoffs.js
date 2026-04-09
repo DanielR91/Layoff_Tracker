@@ -265,14 +265,6 @@ window.LAYOFF_DATA = [
     "region": "Global"
   },
   {
-    "company": "Companies Cut 60,000 Jobs In March\u2014And AI Is Largely To Blame",
-    "layoffs": 60000,
-    "date": "2026-04-09",
-    "industry": "Tech",
-    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcS1pVkVzS0o2dG4xTW1VWkNIemFfUXc5cUFsNjJ0U1EwOTFsckt6NHlLTWtFWC1aT1ZFeGtxWmNnTnB4eXdiR0pKMUdZMzRkbkJTMV9pUl9pX01fNWk4TnYxcDlHbjRDdi05NkR0RU5FOVluX3dNdDRzX0dTQlFETTZWcnluUmFsQnpqQ1JldlVUM0JUazJiRDB3dnV3TkRrdXJRbQ?oc=5",
-    "region": "Global"
-  },
-  {
     "company": "Financial services tech giant plans 118 layoffs at its N.J. hub",
     "layoffs": 118,
     "date": "2026-04-09",
@@ -510,14 +502,6 @@ window.LAYOFF_DATA = [
     "date": "2026-04-09",
     "industry": "Tech",
     "source": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZXVEMnRad0tqcFRaUFpDNlk3OWFhNnk4dzdnTUNoTnE5VWpwekQwRS1vRDJSUS1NTUVXbThXVTV3TmxmQ1A5VGlqRmFMUklPcVAtYzJuSi1MWW4wWUtqRzV0eG5DY0VyQzVtV1hoRk1HVnktTkVMWWFZNDlnZ2FUSHVhTlRKcGNIblczVjgzbmdrMGt1UEt6YkRZYm1Hbjl6TDF0aFNYYi02Xy1oZ3lkOUl4R3pGMU1OaHJkV09nVk94cGFnLURNc0poOXMwdE14LVRnQlFn?oc=5",
-    "region": "Global"
-  },
-  {
-    "company": "Tech layoffs 2026: Over 71,000 jobs gone as companies double down on AI",
-    "layoffs": 71000,
-    "date": "2026-04-09",
-    "industry": "Tech",
-    "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPY3YyWE5tbmxIZnNKWWNGOEhBcmRoM2xEV0tTZElCbGNYTkxBQXhhZktMZ2xBNTBCUmUzQkM5MzJIUkV3YjRMQi1ubzcwZU5TVmlodC0tdmxvZndFa3N2aGhRc2RUMUNYUUJNQzFmd1NpNnlwWnpyNkgyTWZzY1BiRl9VckdkYTMwX2xjMk5fN2RuQnZZeGhoTHB1aXhpV2pkRTVOR3ZralpUdmdza0hrN2k3MVFYT0hrdjlJR1FDQjExVmc?oc=5",
     "region": "Global"
   },
   {

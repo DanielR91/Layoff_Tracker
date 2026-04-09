@@ -26,7 +26,7 @@ def fetch_layoffs():
             
             # AGGREGATE FILTER: Skip titles that sound like summary reports
             # (e.g., "Tech industry lays off 80,000 in Q1")
-            blacklist = ["industry", "sector", "quarter", "month", "total", "year", "overall", "global", "report", "stats"]
+            blacklist = ["industry", "sector", "quarter", "month", "total", "year", "overall", "global", "report", "stats", "companies cut", "jobs gone", "60,000", "71,000"]
             if any(word.lower() in title.lower() for word in blacklist):
                 print(f"Skipping suspected aggregate report: {title}")
                 continue
