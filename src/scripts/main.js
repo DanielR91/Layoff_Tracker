@@ -175,10 +175,18 @@ function renderTable(data) {
                 <div style="font-size: 0.7rem; color: var(--text-secondary)">${item.industry}</div>
             </td>
             <td>${new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</td>
-            <td><span class="badge" style="color: var(--accent-pink)">${item.layoffs.toLocaleString()}</span></td>
+            <td>
+                <div style="display: flex; align-items: center; gap: 6px">
+                    <i data-lucide="trending-down" style="width: 14px; color: var(--accent-pink)"></i>
+                    <span class="badge" style="color: var(--accent-pink)">${item.layoffs.toLocaleString()}</span>
+                </div>
+            </td>
             <td><a href="${item.source}" target="_blank" class="source-link">Source</a></td>
         </tr>
     `).join('');
+    
+    lucide.createIcons();
+    // ... rest of button logic
 
     // Handle Load More Button
     let loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -212,7 +220,10 @@ function renderNewsFeed(data) {
     feed.innerHTML = data.slice(0, 10).map(item => `
         <div class="news-item">
             <div class="news-meta">
-                <span class="news-tag">${item.industry}</span>
+                <div style="display: flex; align-items: center; gap: 4px">
+                    <i data-lucide="newspaper" style="width: 12px"></i>
+                    <span class="news-tag">${item.industry}</span>
+                </div>
                 <span>${new Date(item.date).toLocaleDateString()}</span>
             </div>
             <h4>${item.company} layoffs reported</h4>
@@ -221,6 +232,8 @@ function renderNewsFeed(data) {
             </div>
         </div>
     `).join('');
+
+    lucide.createIcons();
 }
 
 function updateChart(data) {

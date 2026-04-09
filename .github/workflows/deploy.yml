@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
   schedule:
-    - cron: '0 0 * * *' # Every night at midnight
+    - cron: '0 0,12 * * *' # Twice daily: Midnight and Noon UTC
   workflow_dispatch:
 
 permissions:
