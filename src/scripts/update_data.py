@@ -87,6 +87,7 @@ def save_data(new_items):
 
     # Save as Javascript variable
     with open(DATA_FILE, 'w') as f:
+        f.write(f"window.LAST_UPDATED = '{datetime.now().strftime('%b %d, %Y %H:%M UTC')}';\n")
         f.write("window.LAYOFF_DATA = ")
         json.dump(final_data, f, indent=2)
         f.write(";")

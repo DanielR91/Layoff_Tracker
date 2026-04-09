@@ -24,6 +24,11 @@ async function init() {
             console.warn('No layoff data found. Ensure src/data/layoffs.js is loaded.');
         }
 
+        // Render Last Updated timestamp
+        if (window.LAST_UPDATED) {
+            document.getElementById('lastUpdated').textContent = `| UPDATED: ${window.LAST_UPDATED}`;
+        }
+
         applyFilters();
         initEventListeners();
         renderMap();
