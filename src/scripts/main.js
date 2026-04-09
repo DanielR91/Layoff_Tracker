@@ -297,7 +297,7 @@ function renderMap() {
                 <rect x="550" y="120" width="120" height="80" rx="10" fill="rgba(255,255,255,0.05)"/>
             </svg>
             <div style="position: absolute; top: 120px; left: 140px; text-align: center">
-                <div class="glow-pink" style="font-size: 1.5rem; font-weight: 700">NA</div>
+                <div class="glow-pink" style="font-size: 1.5rem; font-weight: 700">US & CA</div>
                 <div style="font-size: 0.7rem">High Impact</div>
             </div>
             <div style="position: absolute; top: 100px; left: 360px; text-align: center">
