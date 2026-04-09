@@ -1,4 +1,4 @@
-window.LAST_UPDATED = 'Apr 09, 2026 13:37 UTC';
+window.LAST_UPDATED = 'Apr 09, 2026 14:22 UTC';
 window.LAYOFF_DATA = [
   {
     "company": "Tech companies are blaming massive layoffs on AI. What\u2019s really going on?",
@@ -574,6 +574,94 @@ window.LAYOFF_DATA = [
     "date": "2026-04-09",
     "industry": "Tech",
     "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNR1FZaWQ2UlBONjdnOGdaTmRQRGw0WXg3QlBadmpHbHpEVG5pMHRGM05RblRnWmNycldtUFJQVzRqVUd0bE1VZ1BhZzlzbEZoV3pIdEFYYTJvQ1lXYzVLOHo4VXAxMldSTkduODFMR0tqcW5CSHJOMzVfR0t2UG9ZYWFOQkNGMUV2TmRuOFJMdw?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Layoffs in the Bay Area tech world hold a hard lesson for everyone",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRFBsYmt2XzlQdUdLeWtKaG9ZOWJOV2pTdzM5RFNWMEx4TjZmQmx4Z2FaSjJWd01lZVotWXVjWXZSV2UyWDFfemNFc2dJLXd1dWp4OGgxZXhYMGtrb1BydnAyVTN6cF9QZDJTS0ZySHotdGRBUWxMQ0FNOElUQ3IxOXJzaXd5c0ZHelQ3LVJBSThwSW1fUTZvb01oUGk?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "How multiple rounds of layoffs can impact remaining workers",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOV2RoZjdLSVFIa0VwQjY4d2ZYcXh2QkM3R0lCbjlZdVp0WXo2SG1aRWk0UjdxdmNacFA1SXdjeG96dlh4WWxYZV9PM2VYZUhpUWZjMDJPZDhWNUxpbzdNMkt5MVJ3NWFmNTZSUDR2aHFHdmhWZTVMMURIYlhIbWxQTzlXMGJ5ZHhmMERZSmluZFpJeWRoTmxLSHFMbWVOdGNpLXc?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Latest gaming layoffs reveal Big Tech's immersive gaming reset",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVGpQNWo2TEdZVVdqSFpaZXJjTjRnLTRYN3hXRERDVGNWc2tEdVlPU0Ffa0hOendHNEZWbmx0SzlaLWE3blBpQ1BMenljd3BNZDZyaUliYUNHaHkxelZ2WjgwbUY3UVd3YUNKVmNuM1c3VVJYaUdGUlJ5WW9wTmxJLS1wWjZUNXFTNmxUVXFxY19RNHE4Ymx2TWh5MDc?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Tech Worker Confidence Hits a New Low as AI Fears and Layoffs Reshape the Job Market",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMzJ5UmN6R0M3bUVTTmlhZTFnN2oyWjZhems5WmxCTTUwaUJ4TG1EN2FXQnpMeHMwUGRiZGY4SEJsUmItTU9leHpMeUJrRlNRMDVZVVFxX1FCN181Y2gtcFhpekthNkViRE5mbFZqU2RaaTJ5R1U2N0lwYVAtbk5XSDhnRXg5RlNmbHQ4MkJNWTM4bGl5aHo4OGowaUppZm15MGNYc3lmbmxaRW5sdE56RHY3aV9rX0dVdUNQeWFMUmlsNDd3dEE?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "AI-Driven Layoffs: Big Tech Cuts Staff to Fund US$650bn Bet",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPLTB5ekFfQkhqeEtEb0kwSHlXTFBuRjJGSWptUTFYanpYXzRDSWViMW1KWmgxZkZHY1I2VHFzbU45ZUpuVGxOQXFkN1kwa2g2ZTdyZnBtdm1aMXZ6WFE1YUdBOHNFSFc5RG52RnQzRFdOSEQyNXV1WmhxcDFBLXRIdW1hQW9YN3UxWElZaWdacWxrZFM5LWc?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "The Fortnite layoffs are another consequence of gaming giving into big tech\u2019s fads",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1zV3I0bFhsVmtjYUVGeFVESEw0WGwyR2R0YzNIS1ZHZHcwMUdSTFJWSUpNX2V0V09UcFZPVnZtWEloYWVkeTFVZ3hpZ1RGdC1YSlBtbVJIbkhuQWtrelhWdHcxYw?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Jensen Huang Just Called Out Every CEO Laying Off Workers in the Name of AI: \u2018You\u2019re out of Imagination\u2019",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd3IyRU90WU5NYTQ0bzN4QVl3aTBqLWpLenVTcFBpSTAzUGdLOHVMak9OZ0J6RUVXSDk4RHBzcWdHQTd1cUFsVHNsMXlnZ0lOMkRxOXp5WXl5UHRQQ3BPT3ZfMHNkZEVZN3VGRlQ1STdwN1laYVZnU0ZoV0NxYXB3NVhkVXF5NVVYcVJn?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "The real story behind 45,000 tech layoffs: where the money actually goes",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVc4QklNckZEUWFDNGlrbWdsWGM3WXlYaS1VMV9FNVlsSVZXanp0cTJMc3l6eVRtem9zUFdSUDh4RVpNNGxmdVZxMGpoVDA4bWNIU0JUUDNYWGdoZ1pUYVMyVnp4RzVjMThGenJkMTFZZzZvLXMzNnJvazl6czlRdkx1V19nMHZYdkczSFY1MGVlOTZIODFVblRSMzJvdlNXS092ZzVB?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "#269: Rumours of layoffs at major tech companies",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1oaFpkZERSd0JNRkJGb0JVMnFpUHNlRWM5MnhyeDY2dHYyQUdFSldXWjhuYl9naFNpSXk1NS1Bd3VSdnE3eUo5bFllT01faWdsUllRRUFOcnFmVUNVUHEyeFViR2lJdjBsOXdMdHk1VXlGeTBqOHQya0s0Zw?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Mass Layoffs Coming To Union County-Based Financial Services Tech Company",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMXdkLWh4RGFLTDRHRkRHWkNuRTMtZ0s4bENNRGZLVTBuSmJSb2k2R2JGUmpDOXBTRDhYYm5pT0MzbE1IOHJxeWl1dVBNQkRBcFo5c01ockNJYmlYRFdSZ0lUVHI2Y1czM2ZaUmg4TGtncl85WkVLUmZ1TExEc01JSWR6WUJ2QkUxWEU0M1hfalNFQVhUWXFzWTBLWE80LXM0UElmRUViU0F2SmtMUEsta3ZfZw?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Calif. biotech company lays off almost half of staff after 78% stock drop",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPb1NHcDhieFB4OTM4NEhYWVJ4Y2ptVklZdHpiNDRvcjRjN1UwSUQxeWVKdjRYcWJwT21CMzFQbHE5NFV0N3RPbXBZQnh5QzR4UVktaVFzcU9MMzBnc2FJckNzWms3RHAtRldvVW9jV2RaN00wTkctYXczV3gzeWhQUk13N2U1WDdoUmJDcg?oc=5",
     "region": "Global"
   },
   {
