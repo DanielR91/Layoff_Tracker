@@ -61,9 +61,13 @@ def save_data(new_items):
         try:
             with open(DATA_FILE, 'r') as f:
                 content = f.read()
-                # Extract JSON from JS variable: window.LAYOFF_DATA = [...];
-                json_str = content.replace("window.LAYOFF_DATA = ", "").strip().rstrip(";")
-                existing_data = json.loads(json_str)
+                # Use regex to find the LAYOFF_DATA array specifically
+                import re
+                match = re.search(r'window\.LAYOFF_DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+                if match:
+                    existing_data = json.loads(match.group(1))
+                else:
+                    print("Could not find LAYOFF_DATA in existing file.")
         except Exception as e:
             print(f"Could not load existing data: {e}")
 
