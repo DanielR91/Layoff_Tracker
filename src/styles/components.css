@@ -137,6 +137,18 @@ tr:hover td {
   text-decoration: underline;
 }
 
+/* Chart Section Fix */
+.chart-section {
+  height: 400px;
+  padding: 24px;
+  position: relative;
+}
+
+.chart-section canvas {
+  width: 100% !important;
+  height: calc(100% - 40px) !important;
+}
+
 /* Loading State */
 .loading {
   animation: pulse 1.5s infinite;
