@@ -26,13 +26,4 @@ A high-performance, real-time dashboard tracking tech industry redundancies, res
 - `src/scripts/update_data.py` - The automated data scraper that pulls RSS news and intelligently updates the dataset.
 - `src/data/layoffs.js` - The source-of-truth dataset exported as a global variable.
 
-## Development
-
-To run the project locally, you don't need a Node server. Just open `index.html` in your browser.
-
-To manually trigger a data update:
-```bash
-python3 src/scripts/update_data.py
-```
-
 *Note: The project leverages a Javascript-based data file (`layoffs.js`) instead of standard JSON to effortlessly bypass local CORS policy restrictions when testing locally.*
