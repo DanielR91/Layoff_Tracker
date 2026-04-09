@@ -16,14 +16,6 @@ window.LAYOFF_DATA = [
     "region": "Global"
   },
   {
-    "company": "Google",
-    "layoffs": 1000,
-    "date": "2026-01-20",
-    "industry": "Tech",
-    "source": "https://google.com",
-    "region": "North America"
-  },
-  {
     "company": "Amazon",
     "layoffs": 2300,
     "date": "2026-04-01",
@@ -40,19 +32,67 @@ window.LAYOFF_DATA = [
     "region": "Global"
   },
   {
-    "company": "Microsoft",
-    "layoffs": 1900,
-    "date": "2026-02-25",
-    "industry": "Tech",
-    "source": "https://microsoft.com",
-    "region": "Europe"
-  },
-  {
     "company": "TikTok",
     "layoffs": 60,
     "date": "2026-04-05",
     "industry": "Social Media",
     "source": "https://tiktok.com",
+    "region": "US"
+  },
+  {
+    "company": "Microsoft",
+    "layoffs": 5000,
+    "date": "2025-11-12",
+    "industry": "Tech",
+    "source": "https://microsoft.com",
+    "region": "North America"
+  },
+  {
+    "company": "Salesforce",
+    "layoffs": 2500,
+    "date": "2025-10-05",
+    "industry": "Tech",
+    "source": "https://salesforce.com",
+    "region": "North America"
+  },
+  {
+    "company": "Cisco",
+    "layoffs": 4000,
+    "date": "2025-08-20",
+    "industry": "Hardware",
+    "source": "https://cisco.com",
+    "region": "Global"
+  },
+  {
+    "company": "Dell",
+    "layoffs": 6000,
+    "date": "2025-05-15",
+    "industry": "Hardware",
+    "source": "https://dell.com",
+    "region": "US"
+  },
+  {
+    "company": "PayPal",
+    "layoffs": 2500,
+    "date": "2025-04-10",
+    "industry": "Fintech",
+    "source": "https://paypal.com",
+    "region": "Global"
+  },
+  {
+    "company": "Zoom",
+    "layoffs": 150,
+    "date": "2025-03-01",
+    "industry": "Tech",
+    "source": "https://zoom.it",
+    "region": "Global"
+  },
+  {
+    "company": "Peloton",
+    "layoffs": 800,
+    "date": "2025-01-22",
+    "industry": "Tech",
+    "source": "https://peloton.com",
     "region": "US"
   }
 ];
