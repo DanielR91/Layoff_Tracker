@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layoff Counter | Global Tech Layoff Dashboard</title>
+    <meta name="description" content="A real-time dashboard tracking layoffs and job cuts across the tech and finance industries.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles/design-tokens.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    
+    <!-- Libraries -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="glass">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon glow-pink">!</span>
+                <h1>Layoff<span>Counter</span></h1>
+            </div>
+            <div class="search-bar">
+                <i data-lucide="search"></i>
+                <input type="text" id="companySearch" placeholder="Search companies...">
+            </div>
+            <div class="status-indicator">
+                <span class="dot"></span>
+                LIVE UPDATES
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Stats -->
+        <section class="stats-grid" id="statsContainer">
+            <div class="stat-card glass loading"></div>
+            <div class="stat-card glass loading"></div>
+            <div class="stat-card glass loading"></div>
+            <div class="stat-card glass loading"></div>
+        </section>
+
+        <div class="dashboard-layout">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar glass">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <label>Period</label>
+                    <div class="button-toggle" id="periodToggle">
+                        <button class="active" data-period="3">3M</button>
+                        <button data-period="6">6M</button>
+                        <button data-period="9">9M</button>
+                        <button data-period="12">12M</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Industry</label>
+                    <select id="industryFilter">
+                        <option value="all">All Industries</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Map Section -->
+                <section class="map-section glass">
+                    <div class="section-header">
+                        <h2>Regional Impact</h2>
+                        <i data-lucide="info"></i>
+                    </div>
+                    <div id="mapContainer" class="map-placeholder">
+                        <!-- SVG Map will be injected here -->
+                    </div>
+                </section>
+
+                <!-- Trend Chart -->
+                <section class="chart-section glass">
+                    <div class="section-header">
+                        <h2>Layoff Trend</h2>
+                    </div>
+                    <canvas id="trendChart"></canvas>
+                </section>
+
+                <!-- List Section -->
+                <section class="list-section glass">
+                    <div class="section-header">
+                        <h2>Recent Announcements</h2>
+                        <div class="sort-controls">
+                            <span>Sort by:</span>
+                            <select id="sortBy">
+                                <option value="date">Date</option>
+                                <option value="amount">Amount</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table id="layoffTable">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Date</th>
+                                    <th>Layoffs</th>
+                                    <th>Source</th>
+                                </tr>
+                            </thead>
+                            <tbody id="layoffBody">
+                                <!-- Data rows will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 Layoff Counter. Data curated from public sources.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/data/layoffs.js"></script>
+    <script type="module" src="src/scripts/main.js"></script>
+    <script>
+        // Init Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

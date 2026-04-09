@@ -1,0 +1,220 @@
+// State Management
+let layoffData = [];
+let filteredData = [];
+let trendChart = null;
+
+const state = {
+    period: 3, // Months
+    search: '',
+    industry: 'all',
+    sortBy: 'date'
+};
+
+// Initialize Dashboard
+async function init() {
+    try {
+        // Use global LAYOFF_DATA (loaded from layoffs.js) instead of fetch to avoid CORS
+        layoffData = window.LAYOFF_DATA || [];
+        
+        if (layoffData.length === 0) {
+            console.warn('No layoff data found. Ensure src/data/layoffs.js is loaded.');
+        }
+
+        applyFilters();
+        initEventListeners();
+        renderMap();
+        console.log('Dashboard initialized with', layoffData.length, 'entries');
+    } catch (error) {
+        console.error('Failed to load data:', error);
+    }
+}
+
+// Event Listeners
+function initEventListeners() {
+    // Search
+    document.getElementById('companySearch').addEventListener('input', (e) => {
+        state.search = e.target.value.toLowerCase();
+        applyFilters();
+    });
+
+    // Period Toggles
+    document.querySelectorAll('#periodToggle button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#periodToggle button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            state.period = parseInt(btn.dataset.period);
+            applyFilters();
+        });
+    });
+
+    // Industry Filter
+    const industrySelect = document.getElementById('industryFilter');
+    const industries = [...new Set(layoffData.map(d => d.industry))];
+    industries.forEach(ind => {
+        const opt = document.createElement('option');
+        opt.value = ind;
+        opt.textContent = ind;
+        industrySelect.appendChild(opt);
+    });
+
+    industrySelect.addEventListener('change', (e) => {
+        state.industry = e.target.value;
+        applyFilters();
+    });
+
+    // Sort By
+    document.getElementById('sortBy').addEventListener('change', (e) => {
+        state.sortBy = e.target.value;
+        applyFilters();
+    });
+}
+
+// Filtering Logic
+function applyFilters() {
+    const now = new Date();
+    const cutoff = new Date();
+    cutoff.setMonth(now.getMonth() - state.period);
+
+    filteredData = layoffData.filter(item => {
+        const itemDate = new Date(item.date);
+        const matchesDate = itemDate >= cutoff;
+        const matchesSearch = item.company.toLowerCase().includes(state.search);
+        const matchesIndustry = state.industry === 'all' || item.industry === state.industry;
+        return matchesDate && matchesSearch && matchesIndustry;
+    });
+
+    // Sort
+    filteredData.sort((a, b) => {
+        if (state.sortBy === 'date') return new Date(b.date) - new Date(a.date);
+        if (state.sortBy === 'amount') return b.layoffs - a.layoffs;
+        return 0;
+    });
+
+    renderStats();
+    renderTable();
+    updateChart();
+}
+
+function renderStats() {
+    const total = filteredData.reduce((sum, item) => sum + item.layoffs, 0);
+    const uniqueCompanies = new Set(filteredData.map(d => d.company)).size;
+    const largest = filteredData.length > 0 ? Math.max(...filteredData.map(d => d.layoffs)) : 0;
+    
+    // Find most affected industry
+    const indCount = {};
+    filteredData.forEach(d => indCount[d.industry] = (indCount[d.industry] || 0) + d.layoffs);
+    const topIndustry = Object.entries(indCount).sort((a,b) => b[1]-a[1])[0]?.[0] || 'N/A';
+
+    const container = document.getElementById('statsContainer');
+    container.innerHTML = `
+        <div class="stat-card glass">
+            <span>Total Layoffs</span>
+            <h2 class="glow-cyan">${total.toLocaleString()}</h2>
+            <p class="trend up">Last ${state.period} Months</p>
+        </div>
+        <div class="stat-card glass">
+            <span>Companies Affected</span>
+            <h2>${uniqueCompanies}</h2>
+            <p class="trend">Active Reporting</p>
+        </div>
+        <div class="stat-card glass">
+            <span>Largest Single Cut</span>
+            <h2 class="glow-pink">${largest.toLocaleString()}</h2>
+            <p class="trend">Peak Event</p>
+        </div>
+        <div class="stat-card glass">
+            <span>Most Impacted Sector</span>
+            <h2>${topIndustry}</h2>
+            <p class="trend">By Volume</p>
+        </div>
+    `;
+}
+
+function renderTable() {
+    const tbody = document.getElementById('layoffBody');
+    tbody.innerHTML = filteredData.map(item => `
+        <tr>
+            <td>
+                <div style="font-weight: 600">${item.company}</div>
+                <div style="font-size: 0.7rem; color: var(--text-secondary)">${item.industry}</div>
+            </td>
+            <td>${new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</td>
+            <td><span class="badge" style="color: var(--accent-pink)">${item.layoffs.toLocaleString()}</span></td>
+            <td><a href="${item.source}" target="_blank" class="source-link">Source</a></td>
+        </tr>
+    `).join('');
+}
+
+function updateChart() {
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    
+    // Aggregate by month for the chart
+    const dataByMonth = {};
+    filteredData.forEach(d => {
+        const month = d.date.substring(0, 7); // YYYY-MM
+        dataByMonth[month] = (dataByMonth[month] || 0) + d.layoffs;
+    });
+
+    const labels = Object.keys(dataByMonth).sort();
+    const values = labels.map(l => dataByMonth[l]);
+
+    if (trendChart) trendChart.destroy();
+    
+    trendChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Layoffs per Month',
+                data: values,
+                borderColor: '#00f2ff',
+                backgroundColor: 'rgba(0, 242, 255, 0.1)',
+                fill: true,
+                tension: 0.4,
+                borderWidth: 3,
+                pointBackgroundColor: '#00f2ff',
+                pointRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { grid: { color: 'rgba(255,255,255,0.05)' }, border: { display: false } },
+                x: { grid: { display: false }, border: { display: false } }
+            }
+        }
+    });
+}
+
+function renderMap() {
+    // Simple mock SVG map representation
+    const container = document.getElementById('mapContainer');
+    container.innerHTML = `
+        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative">
+            <svg viewBox="0 0 800 400" width="100%" height="100%" style="opacity: 0.3">
+                <path fill="currentColor" d="M150,150 Q200,100 250,150 T350,150 T450,150 T550,150 T650,150" stroke="var(--accent-cyan)" stroke-width="1" fill="none"/>
+                <!-- Simplistic world shape -->
+                <rect x="100" y="100" width="100" height="60" rx="10" fill="rgba(255,255,255,0.05)"/>
+                <rect x="300" y="80" width="150" height="100" rx="10" fill="rgba(255,255,255,0.05)"/>
+                <rect x="550" y="120" width="120" height="80" rx="10" fill="rgba(255,255,255,0.05)"/>
+            </svg>
+            <div style="position: absolute; top: 120px; left: 140px; text-align: center">
+                <div class="glow-pink" style="font-size: 1.5rem; font-weight: 700">NA</div>
+                <div style="font-size: 0.7rem">High Impact</div>
+            </div>
+            <div style="position: absolute; top: 100px; left: 360px; text-align: center">
+                <div class="glow-cyan" style="font-size: 1.5rem; font-weight: 700">EU</div>
+                <div style="font-size: 0.7rem">Moderate</div>
+            </div>
+             <div style="position: absolute; top: 140px; left: 580px; text-align: center">
+                <div class="glow-cyan" style="font-size: 1.5rem; font-weight: 700">ASIA</div>
+                <div style="font-size: 0.7rem">Expanding</div>
+            </div>
+        </div>
+    `;
+}
+
+// Start app
+init();

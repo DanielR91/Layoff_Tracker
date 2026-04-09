@@ -1,0 +1,12 @@
+# Data
+src/data/__pycache__/
+__pycache__/
+*.pyc
+
+# Local Config
+.DS_Store
+.vscode/
+.idea/
+
+# Environment
+.env
