@@ -21,11 +21,18 @@ def fetch_layoffs():
             link = item.find('link').text
             pub_date = item.find('pubDate').text
             
+            # Simple extraction: usually "Company Name - Source Name"
+            # or "X Company to layoff Y people"
+            company = title.split(' - ')[0] if ' - ' in title else title.split(':')[0]
+            
+            # Formatted item to match dashboard schema
             items.append({
-                "source_title": title,
-                "url": link,
-                "date": pub_date,
-                "imported_at": datetime.now().isoformat()
+                "company": company,
+                "layoffs": 0, # Default to 0 for news snippets (manual update later)
+                "date": datetime.now().strftime("%Y-%m-%d"), # Use simple ISO date
+                "industry": "Tech",
+                "source": link,
+                "region": "Global"
             })
             
         return items
@@ -50,6 +57,11 @@ def save_data(new_items):
     
     # Add newly fetched/demo items
     for item in new_items:
+        # Check for required keys before processing
+        if 'company' not in item or 'date' not in item:
+            print(f"Skipping malformed item: {item.get('company', 'Unknown')}")
+            continue
+            
         key = f"{item['company'].lower()}_{item['date']}"
         # Only add if it's new or has more accurate info
         if key not in data_map:
