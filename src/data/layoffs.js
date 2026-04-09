@@ -936,6 +936,14 @@ window.LAYOFF_DATA = [
     "region": "Global"
   },
   {
+    "company": "Meta, Oracle and Qualcomm share details on layoffs across California",
+    "layoffs": 0,
+    "date": "2026-04-09",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNmdXVFZmS3hQcWZRVG5RYlVNQjlfUERNbUdmOVZCNGN3LUFFdUxvcm9ZSkNQc0FDenlQbEdkQ0hKbzdSWXg1TmFpSnV4ck90UFlNbm1oQVpUbUdQc2VicFNDQ1pubkVMbXIzTG5ZVjNWZTlTQnNZRVR5Z1JrRzNBMjZMdGVvMmtzTHhBbUpfWWxvVEN0XzdnVjhFdU9nYl95QXg1WnhWZjgxNjl1NDBVTV95NA?oc=5",
+    "region": "Global"
+  },
+  {
     "company": "Pendo",
     "layoffs": 90,
     "date": "2026-04-07",
