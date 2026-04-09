@@ -22,14 +22,22 @@ def fetch_layoffs():
             pub_date = item.find('pubDate').text
             
             # Simple extraction: usually "Company Name - Source Name"
-            # or "X Company to layoff Y people"
             company = title.split(' - ')[0] if ' - ' in title else title.split(':')[0]
             
+            # Try to extract a layoff count from the title
+            import re
+            count = 0
+            # Look for numbers like "X jobs", "X layoffs", "X employees"
+            numbers = re.findall(r'(\d{1,3}(?:,\d{3})+|\d+)\s*(?:jobs?|layoffs?|employees?|staff|cuts?)', title, re.IGNORECASE)
+            if numbers:
+                # Remove commas and convert to int
+                count = int(numbers[0].replace(',', ''))
+
             # Formatted item to match dashboard schema
             items.append({
                 "company": company,
-                "layoffs": 0, # Default to 0 for news snippets (manual update later)
-                "date": datetime.now().strftime("%Y-%m-%d"), # Use simple ISO date
+                "layoffs": count, 
+                "date": datetime.now().strftime("%Y-%m-%d"), 
                 "industry": "Tech",
                 "source": link,
                 "region": "Global"
