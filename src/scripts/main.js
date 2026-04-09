@@ -4,10 +4,11 @@ let filteredData = [];
 let trendChart = null;
 
 const state = {
-    period: 3, // Months
+    period: 1, // Default to 1 Month (30 days) as requested
     search: '',
     industry: 'all',
-    sortBy: 'date'
+    sortBy: 'date',
+    visibleCount: 20 // Pagination
 };
 
 // Initialize Dashboard
@@ -15,6 +16,9 @@ async function init() {
     try {
         // Use global LAYOFF_DATA (loaded from layoffs.js) instead of fetch to avoid CORS
         layoffData = window.LAYOFF_DATA || [];
+        
+        // Merge similar company names logic
+        layoffData = mergeDuplicates(layoffData);
         
         if (layoffData.length === 0) {
             console.warn('No layoff data found. Ensure src/data/layoffs.js is loaded.');
@@ -27,6 +31,19 @@ async function init() {
     } catch (error) {
         console.error('Failed to load data:', error);
     }
+}
+
+function mergeDuplicates(data) {
+    const merged = {};
+    data.forEach(item => {
+        const normName = item.company.toLowerCase().replace(/ llc| inc\.| inc| corp\.| corp/g, '').trim();
+        const key = `${normName}_${item.date}`;
+        
+        if (!merged[key] || item.layoffs > merged[key].layoffs) {
+            merged[key] = item;
+        }
+    });
+    return Object.values(merged);
 }
 
 // Event Listeners
@@ -73,7 +90,14 @@ function initEventListeners() {
 function applyFilters() {
     const now = new Date();
     const cutoff = new Date();
-    cutoff.setMonth(now.getMonth() - state.period);
+    
+    // logic for period
+    if (state.period === 1) cutoff.setMonth(now.getMonth() - 1);
+    else if (state.period === 3) cutoff.setMonth(now.getMonth() - 3);
+    else if (state.period === 6) cutoff.setMonth(now.getMonth() - 6);
+    else if (state.period === 9) cutoff.setMonth(now.getMonth() - 9);
+    else if (state.period === 12) cutoff.setMonth(now.getMonth() - 12);
+    else if (state.period === 24) cutoff.setMonth(now.getMonth() - 24);
 
     filteredData = layoffData.filter(item => {
         const itemDate = new Date(item.date);
@@ -90,6 +114,7 @@ function applyFilters() {
         return 0;
     });
 
+    state.visibleCount = 20; // Reset pagination on filter
     renderStats();
     renderTable();
     updateChart();
