@@ -157,7 +157,9 @@ function renderStats() {
 
 function renderTable() {
     const tbody = document.getElementById('layoffBody');
-    tbody.innerHTML = filteredData.map(item => `
+    const displayData = filteredData.slice(0, state.visibleCount);
+    
+    tbody.innerHTML = displayData.map(item => `
         <tr>
             <td>
                 <div style="font-weight: 600">${item.company}</div>
@@ -168,6 +170,27 @@ function renderTable() {
             <td><a href="${item.source}" target="_blank" class="source-link">Source</a></td>
         </tr>
     `).join('');
+
+    // Handle Load More Button
+    let loadMoreBtn = document.getElementById('loadMoreBtn');
+    if (!loadMoreBtn) {
+        loadMoreBtn = document.createElement('button');
+        loadMoreBtn.id = 'loadMoreBtn';
+        loadMoreBtn.className = 'glass load-more-btn';
+        // Insert after the table container
+        document.querySelector('.list-section').appendChild(loadMoreBtn);
+        loadMoreBtn.addEventListener('click', () => {
+            state.visibleCount += 50;
+            renderTable();
+        });
+    }
+    
+    if (state.visibleCount >= filteredData.length) {
+        loadMoreBtn.style.display = 'none';
+    } else {
+        loadMoreBtn.style.display = 'block';
+        loadMoreBtn.textContent = `Load More (${filteredData.length - state.visibleCount} remaining)`;
+    }
 }
 
 function updateChart() {
