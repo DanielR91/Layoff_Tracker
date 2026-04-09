@@ -1,4 +1,4 @@
-window.LAST_UPDATED = 'Apr 09, 2026 14:22 UTC';
+window.LAST_UPDATED = 'Apr 09, 2026 14:37 UTC';
 window.LAYOFF_DATA = [
   {
     "company": "Tech companies are blaming massive layoffs on AI. What\u2019s really going on?",
