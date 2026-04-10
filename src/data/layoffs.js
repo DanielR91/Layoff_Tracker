@@ -1,4 +1,4 @@
-window.LAST_UPDATED = 'Apr 10, 2026 02:27 UTC';
+window.LAST_UPDATED = 'Apr 10, 2026 13:07 UTC';
 window.LAYOFF_DATA = [
   {
     "company": "From coder to shuttle driver: Where Seattle\u2019s laid-off tech workforce is now",
@@ -566,6 +566,86 @@ window.LAYOFF_DATA = [
     "date": "2026-04-10",
     "industry": "Tech",
     "source": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9JQU5MTm8wQV9PejlueWlYWEtwbW80VzFDcXBfYnlBUWY3ckNMRnNodF94RGdubHVQWjNMbnJpc3JsMF9LUzRFcGVlY0M1X0loU1hjenY4UEVqMFdFdVE?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "2026 tech company layoffs",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWjYtTERSWHVxM2xtWEc2bkYtdkE4Nk45WHBvdVdycmpKTEprR1pURVVIZkZJRXpDUzRRaTQ5WVRwRV9sNENyT0VmRWtDX1NmLWtBeVpqUUpzRHUwQjI4ZUxhNXBncEx5cnZZYkstTnRmQXlSbUdkUzFTdnBHUERKbUU0cw?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Tech layoffs clash with remote job boom",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNVzRzb1RtMUp0RDVIQnhpWWxfVm9JdnFaMmNWQ003QnU2a29ZUHU1Wi1rYk5GZ0ZFeVJwUkwzbVEyVjliWGs2OUtTNVFJY19BNFNVM2RuWjZwV2pxdGJoTGZrZTRTM19GWUpvZm5YbWtqZGtQM0ppZVFtaDVCMkFuZ2tqMVNfcXptU2RvOE9BWlBtUHNUR2loVTljX1hSRjZlWEdxeEJHLWJka21hLXUyZ2RTd09rcmVUUHUxcHd6bFFvUnJrS3lWY2tTUC1uUXJNWGJsV0JVZVc?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Tech layoffs cross 45,000 as Amazon, Block, Atlassian, Meta cut jobs",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZFJvN2RTRFpFSmNqZHFTLXFZbDFpcW5EWkxLcUU4MjZnaVEwYmtzOEhvUFZhTHlwSTVnZURzQ0t3cDZOZXVON0hDcnVZUHBKUjhqNkFZenYyLWlncWo2RWVET2JkZ3kxVmdhYmdqZVY1bWROX2ZTZVlqX0pid2dFWjFTYkNhR2ZJY192bUNHdjZBd3JYbHl4azMxX0dkYUgwLTVXXzB5ZnUtMnBrU1lVSWw1NEY2ajDSAbwBQVVfeXFMTXY1Q0h2cERxYWFCeUJoX3NJbmI4NlhwUTN2eDNuYmItUE4xNkxsTEQ4VENnREFYNHozeS1JdEtnaXplZHdQMl9wVUpDQXVHU2RWalJTUkxZd0MyUFVJcjBkRWdkc0wyc1czSzRXVzgyQ0RBVUVmeHVmWmFXaUhxZ1hfNFpJZ2NSa0RJSk9vRkJXcVVxVEtQMEE5S3NIVjZSaWxCUGZEbUk5OUtwQkQ4WDVEWENiekdneGt2aUk?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "AI-Driven Layoffs: Big Tech Cuts Staff to Fund US$650bn Bet",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPLTB5ekFfQkhqeEtEb0kwSHlXTFBuRjJGSWptUTFYanpYXzRDSWViMW1KWmgxZkZHY1I2VHFzbU45ZUpuVGxOQXFkN1kwa2g2ZTdyZnBtdm1aMXZ6WFE1YUdBOHNFSFc5RG52RnQzRFdOSEQyNXV1WmhxcDFBLXRIdW1hQW9YN3UxWElZaWdacWxrZFM5LWc?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Nearly 80,000 tech jobs cut in Q1, but AI's full impact may be yet to come",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPS3BtTm9PcnRDQ3dGVTB2Y2tCUHUyTnpEOU1nNlA1Y3ZUb3FlTWJDdE9sWXBmQ19Sbmg1YUV1NXlFb3Rtd2M2QVJjQlZYRXRjdE5EMElmZi1pX0RkSGRCRkQzX1NqN1o0VXI1SEo2UmMwSm1FdHJJaDcyWDNNc3NlMzVkVGFpYXVEOHVuV1F2OUxxa0RuRWpkdFdQbnR3ZnF3MzJOdFQtZ0FRUHJHeW1GVlhFSDZzeHNMZzd3VzJKaTBqd2U0UE9LU0pLaHRYWXp3ZVo4MmN5Z2I?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Behind Oracle\u2019s CFO hire: AI-era executives secure key roles in Big Tech",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOT2xYT2E3dTN2eFZuZkxHQ0NQR0o3LUpTNGo5UEhacnl6VDF4anQwM3NaQjE0X2xsUlR0eXRUMFZkaHBSNzkwVnBsa1RpdjI4YkVJdzF5QXJWeUNwdlBHSndqX0NBZXdjR1ZSdkduNXFTTmpqZDlqTHFVSzFsQVlTRUxFOFdaYjAzWnUzYjFDMzZWVjUyNFpQQV9WWQ?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Big Tech Layoffs Are Hitting Meta, Microsoft, and Oracle as AI Spending Surges",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1XOVBENEItVmlYa3c3UVJ0R3hMWnBjLVJmajdJeW9OU1NPZFJ6WEVBM01pNTV3SFEteG1taE13UHZNYTYyTUpMYlhLLXpWZmV4WmhSVmhIU0VLb0p3OGZxYWRaZGo0ZEY3czFlb2tKMjZ0OGsxUGJYYUNB?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Raleigh software startup Pendo joins the wave of tech layoffs, cutting 10% of its workforce",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWUF4SGtVQ1M0Rl8weVdqZWVWQjliQklmYXZGczFTWkhnTEhldzl2TmFFZ3JEQVJJQ0VWTnZyQ1cydjh2MGVfZktTSmR4RVI4RS0wcmJ2aE5tSFhDYldjM2NZc04zZm5EMzNjdnFlRnVpV2JneGh6Mllzb1NZOFlZdjBoQnQtV3JaNXRnZF80cjI1XzdQ?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "More Tech Layoffs: Atlassian Slashes 10% of Workforce, Stock Climbs After Announcement",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB0OHFYQWlQV2hNWjJWb28wXzNJX0t4QWhfNGt5ZUk3QjRwUk5KSVlHN3BSckRMa1MweV9MRDdyNEladENTanRuVzRKRXhJdVE3OEVvY2dEakJ1VEhSczJTX3hJZWo4RzdqRnZocGdkdkJydUVPU0N3UUZrZUdFSFU?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "The real story behind 45,000 tech layoffs: where the money actually goes",
+    "layoffs": 0,
+    "date": "2026-04-10",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVc4QklNckZEUWFDNGlrbWdsWGM3WXlYaS1VMV9FNVlsSVZXanp0cTJMc3l6eVRtem9zUFdSUDh4RVpNNGxmdVZxMGpoVDA4bWNIU0JUUDNYWGdoZ1pUYVMyVnp4RzVjMThGenJkMTFZZzZvLXMzNnJvazl6czlRdkx1V19nMHZYdkczSFY1MGVlOTZIODFVblRSMzJvdlNXS092ZzVB?oc=5",
     "region": "Global"
   },
   {
