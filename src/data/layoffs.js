@@ -1,4 +1,4 @@
-window.LAST_UPDATED = 'Apr 11, 2026 02:07 UTC';
+window.LAST_UPDATED = 'Apr 11, 2026 12:56 UTC';
 window.LAYOFF_DATA = [
   {
     "company": "From coder to shuttle driver: Where Seattle\u2019s laid-off tech workforce is now",
@@ -550,6 +550,38 @@ window.LAYOFF_DATA = [
     "date": "2026-04-11",
     "industry": "Tech",
     "source": "https://news.google.com/rss/articles/CBMingJBVV95cUxQaWFTSnk5Y0NjUGhOenYxSXNsZXZLck1lc29UMktmclFYNlJzTjREUHdER0J4ZUk5RjRUeFE3NE9LR0VIRVVqYkpka2FDa2pONmVLOEdPN3djSWlWNF95MGtuMUIyVkFVT1ZGMlIyWFlfUXA2NFpVc0FuRWVwS1lGeGRQSUMtLXRsWUZOMjdoWEgzeUZYdGZEUUxBMzhUVWNLN3I3Q0xQNXRlZWVpQWo5bWdLWHBSRGlaYldRdnB2cElSTFg3RDZTVWNQUWJ2YXR4RHJSTFpHQmJvY3RLSGhqZXItdDZWWTNVRkVPM2g5SmEyMVpQWnZHaXZNd3c0R1NyYXgzbmp1Mkp1SXJFa2tDM24zbGhDMlFaYW1uWHVB?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Marc Andreessen: Companies are 75% overstaffed and AI is the \u2018silver bullet excuse\u2019 to clean house",
+    "layoffs": 0,
+    "date": "2026-04-11",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTUFMUDNzQmdvc1QyWXFpUktBR3FYSGZLN0NGc3pScTJzM3BFQUtDUlprWVNFQWJpUkdHYmhhU09ScGxrTllrNWpwRVFnaUs3OW1EMVRncXh3dVdkdWdjZnJMTGZGSkc2RTZYcFpacjVEemtaNXpITjNmT0tDX1ZIUmYwUC1YeThoU2dXSnZuaVJwdHJJ?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Dell continues to quietly shrink its workforce",
+    "layoffs": 0,
+    "date": "2026-04-11",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQci1FZUxyZjhfMjhxQ2tZbWcwQ3REZnJCLVVaNUdQeVU2REtJT3RKY24tdk9pb01zQy1NeEctNkQ3X3VoOXk0eWNDZE9YRHNEbUpvd3ZYS0JkMVh3UVlsNW1SYUNTOW9UdTRDTnZLakxieXRheUNmMkllakt0V1dFWDNjQ3FUY2ptbHVnSkR0OEhBWlBl?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Layoff announcements are reading more like AI-era manifestos",
+    "layoffs": 0,
+    "date": "2026-04-11",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPblFLVVBRdlhYREo5ZWF2cVBzcERrWnpOcEpTSXExcm9pOUZrOGR6MWQtUFVDZmR0dDdGajZfNHR6QXVuUEUydjEzdFE1bGF4aWVqejNwSTNVSXJBQy05UXlVVmJyYmZ2djFiU29CV0tmRExfSTJ0Vzg5YmZvdmZUZVlWWjdTbnE1YjE4Q0dnRnNwemV4WnFWdFEtTQ?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Possible massive Meta layoffs could slam Texas tech workers",
+    "layoffs": 0,
+    "date": "2026-04-11",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdTNXVlpCamRIYU1ROC1qU0xSa1J2OHhZZ1lRVjJmdDRMRjNVbWxVSk1JcEozcUdjUTROYkpTMlVpeVMtSnlHWlZON3hhcW84RDJCaXJfbkthQ3hYNTdfS0RNeEtfSmxvWW9pekhiRXVzVEVyeEY2T1RvdjBZVW5RSmt5cHJVTV93?oc=5",
     "region": "Global"
   },
   {
