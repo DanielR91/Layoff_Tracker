@@ -1,4 +1,4 @@
-window.LAST_UPDATED = 'Apr 12, 2026 02:29 UTC';
+window.LAST_UPDATED = 'Apr 12, 2026 12:59 UTC';
 window.LAYOFF_DATA = [
   {
     "company": "From coder to shuttle driver: Where Seattle\u2019s laid-off tech workforce is now",
@@ -534,6 +534,110 @@ window.LAYOFF_DATA = [
     "date": "2026-04-12",
     "industry": "Tech",
     "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMTNxUGlBc3IyNHVIUnpDN2QyUWE4TldqN3RGSTkyVWlzZUxUSnctUmNjekRxX29jeHhiYVZPU1dBUm91N2xhZ2tKQlhmZEowajNwdUpRODREOEtVcndBd3NWSnYweDVGU0x3d2w1TDhXMVhtY0MtblVsVUNXZ1hOZ1pTcw?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Fired by Oracle, Meta? Goldman Sachs warns laid-off tech workers",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPTk9zTTdxQjg4OTIyZnFjRzlleWoxLTZWRTAwQmNMMUlYTTRfSE9Ya0pqRTJuMTBDcXJtVlB4R21jMVdUbFg1dmVtc2M5MmF0S0R0QllUXzJQNl80VXlqbklTM1hwN05NU3hvM3Nlc0o2SXRXNVBWaGtFQ2Qyc3A1ckhaT0cxeVB2b2FRZ2lSSHdFbnhnYWQ2eTI5TmR3dEhfZzNiTmEyNThaRWtRdDZlanFWUjU4MlQwS3FsMGRrVVVPSkpvQkFaeEk4QVpBMHJzQzRucGwxMUhpcVNDQjFzYzJ3SkdKQThfSHdzemtJaFFxM1ZPWWc2T1p3LWVORVHSAYQCQVVfeXFMUGJiUUVpbjVYbFVYVEVmWHVtS1pJNnlWa3Z2MDJGSTNLNUdRZkpFcFVSVHo1RUtpa1JBOUlCRkdhdEpkZ1Vwd01ZRUV2eHJCSUV4ZGpqaTMtdzlnVGVlWlJ1b05OR0V6MUEyLWdEU2FBdVAySXZrRjl0NjFuQkdXckkzU1hQTXRVYzE0dTdlNlF6dE5WZF82MlJVNms0cDFCam1pX21wNVJOMk1HSWRwSWJnV2Z2aUQyVno4MElodXZrWHJKUFZZU2JScUpyYkpPVmhhbS1IZS11Ylk2NHhnb3FWUHlnWVM5ZWt5akVHUUZLa3k1cXRBMTlROElrdVg3eTBPX1E?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Major software company Atlassian cuts over 250 jobs in SF",
+    "layoffs": 250,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbmhEQmZJSDJBcXE1S0ZLZXM2YngtY3duclhsM2tLR1MyaVVlOHJubTZ3clZCUzBkeFdrMWZkNGNDV0prT3R6aGlCQWkydVcwR2dTU1g5WjAwaldfY0JCM2xWYUxkVWlhYzVBUFQyX0hxUWxWZV9UVUlOM2lVeHFRZC1jQzlmZm5LeXZEazF6cUk4OUZkcHNjTFZHTTFLS2d60gGmAUFVX3lxTE9UUndJeWtKalE5YXcxbTlqUWNZTG5LZEFiSVJZd1V1ZWYwbVdKUlV5bXRMMmxfTXdOSlpLSFJTaER0UDladFZ6TU0xVV9LbXREakdSMGFZekRHOFMtUkNCc0Vxcmx5TlprMlhqS3RjRzFDNEMxYmpsaV9GMVFyazZDUC05eFdGMHA3bDJtVHppVGxncHRXTUNvRlFReXc1NXVRMHJJMVE?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Fired by email: How mass layoffs are reshaping trust in tech",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiakFVX3lxTE52TWJBcTNVNGdPMml1ZmJucEp2enNjdEotNEV6UVdTbnp5M3JLWkVTOXBRRjhucjRKSkZXbjV3ZWVGaGpCdmJ1bzdlVkhJbUlERVhtTlVUbDNkQndacEl1cTVYU1FMc1Nkd0E?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Tech Bytes: Oracle\u2019s mass layoffs",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPeFJQcF9BaUtqWm5KWWhmS05ybkhvYWprTWQya18wM2JfNnRCeXg1TENpdG1TVXpLRFdmWUlCUzJka05KWlZ5LXJrTGxZWWNuYWlxMktqc05aQ0NRYUxsZDlFWlNFNmdzNms2bXgtTGloRU5vdGNwX3FGSEg4VDkycmpR?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Calif. biotech company lays off almost half of staff after 78% stock drop",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPb1NHcDhieFB4OTM4NEhYWVJ4Y2ptVklZdHpiNDRvcjRjN1UwSUQxeWVKdjRYcWJwT21CMzFQbHE5NFV0N3RPbXBZQnh5QzR4UVktaVFzcU9MMzBnc2FJckNzWms3RHAtRldvVW9jV2RaN00wTkctYXczV3gzeWhQUk13N2U1WDdoUmJDcg?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Raleigh software startup Pendo joins the wave of tech layoffs, cutting 10% of its workforce",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWUF4SGtVQ1M0Rl8weVdqZWVWQjliQklmYXZGczFTWkhnTEhldzl2TmFFZ3JEQVJJQ0VWTnZyQ1cydjh2MGVfZktTSmR4RVI4RS0wcmJ2aE5tSFhDYldjM2NZc04zZm5EMzNjdnFlRnVpV2JneGh6Mllzb1NZOFlZdjBoQnQtV3JaNXRnZF80cjI1XzdQ?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Meta to lay off nearly 200 Bay Area employees",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRXRaNWhfZVBQU1BFUEJJdE9XOVUzQlhjVWNTbG96YVR3OGxwS3EwRVU2c0RSU1cwdmpzV3cyU1JQYk1DR2cySmt2NUczQm9sajZBcHBvLWppaVkyYm5Mek9BQlZkN21lRlJrNGN6U3hDVjdtVnFIWW1pOVBHako3d2F1djNHQTQxVzIwRS04a2nSAZYBQVVfeXFMUHhGRHBEUzl4bWotNjVoNjNwLXZPd29adzlqYVNwTG9KRVM1ODRtVmhrUXB0dkZiTXpwbHpNbk5vd3NjekprUDgxOGtaLVFLTmVRMlR0bGNiSVE2cy0xazBEMEVrRkhLVEppMWRwcXEybWpKUWR6alVFS3J1TFVuSDVUVHAxcVJmQUhZazVUMjEzamw5X2pR?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Big Tech Layoffs Are Hitting Meta, Microsoft, and Oracle as AI Spending Surges",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1XOVBENEItVmlYa3c3UVJ0R3hMWnBjLVJmajdJeW9OU1NPZFJ6WEVBM01pNTV3SFEteG1taE13UHZNYTYyTUpMYlhLLXpWZmV4WmhSVmhIU0VLb0p3OGZxYWRaZGo0ZEY3czFlb2tKMjZ0OGsxUGJYYUNB?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Oracle latest tech giant to announce Washington layoffs amid broader wave of regional cuts",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMingJBVV95cUxQaWFTSnk5Y0NjUGhOenYxSXNsZXZLck1lc29UMktmclFYNlJzTjREUHdER0J4ZUk5RjRUeFE3NE9LR0VIRVVqYkpka2FDa2pONmVLOEdPN3djSWlWNF95MGtuMUIyVkFVT1ZGMlIyWFlfUXA2NFpVc0FuRWVwS1lGeGRQSUMtLXRsWUZOMjdoWEgzeUZYdGZEUUxBMzhUVWNLN3I3Q0xQNXRlZWVpQWo5bWdLWHBSRGlaYldRdnB2cElSTFg3RDZTVWNQUWJ2YXR4RHJSTFpHQmJvY3RLSGhqZXItdDZWWTNVRkVPM2g5SmEyMVpQWnZHaXZNd3c0R1NyYXgzbmp1Mkp1SXJFa2tDM24zbGhDMlFaYW1uWHVB?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Jensen Huang Just Called Out Every CEO Laying Off Workers in the Name of AI: \u2018You\u2019re out of Imagination\u2019",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd3IyRU90WU5NYTQ0bzN4QVl3aTBqLWpLenVTcFBpSTAzUGdLOHVMak9OZ0J6RUVXSDk4RHBzcWdHQTd1cUFsVHNsMXlnZ0lOMkRxOXp5WXl5UHRQQ3BPT3ZfMHNkZEVZN3VGRlQ1STdwN1laYVZnU0ZoV0NxYXB3NVhkVXF5NVVYcVJn?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "The real story behind 45,000 tech layoffs: where the money actually goes",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVc4QklNckZEUWFDNGlrbWdsWGM3WXlYaS1VMV9FNVlsSVZXanp0cTJMc3l6eVRtem9zUFdSUDh4RVpNNGxmdVZxMGpoVDA4bWNIU0JUUDNYWGdoZ1pUYVMyVnp4RzVjMThGenJkMTFZZzZvLXMzNnJvazl6czlRdkx1V19nMHZYdkczSFY1MGVlOTZIODFVblRSMzJvdlNXS092ZzVB?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Financial services tech giant plans 118 layoffs at its N.J. hub",
+    "layoffs": 118,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQblBGNmpPN1lhbnFIak5aUDFUYkVtbWdaY0R1M24yZ2JRakt1aDUzdEFqU2VBTjJkTDNrdFJkRVNaSThNLUlYU01TOE1VejZXQ24ySVRBaXZmR3ZPLWdIU3hNOTVWX3ZRVEgxUnFhVFpEa3NGSnJlTG5FdmczZWxfem84QTVQUjh1R0k1Ni1EYnFsRmJGbVhRY1E0OHhPZWtR0gG0AUFVX3lxTE8tblhWMDVEOVlxUjZQVG1YeGx1WEZlLWd3Y3J6cEFYZ3Q0c2Zpb3BsaTA0anFheEU3QnUxR1I3Y2RTd05wZ3FZdFVrNEdjSm1Rem00dm91QUl0b2hwc2FhMnUyT2U2cEFQU1VjSkt3VVdfeGw3UmlYaFZBdHZrY3lzcEpDZTlISmlnNTRxNjdIcEh0bnZ6aE45dHotQ080TmtONHlIQW1oVjJURVRUSHRSRWMzQQ?oc=5",
+    "region": "Global"
+  },
+  {
+    "company": "Read the Email Oracle Is Sending to Laid-Off Employees",
+    "layoffs": 0,
+    "date": "2026-04-12",
+    "industry": "Tech",
+    "source": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSkxpU05RT0VSM3VCR2w5S0lUU3VwRUVaUGFteGNoX3ppNjdGWGRvTEVZV3VLN0tzUjBuRU9jaUNjZXo3Zmk3OW92UUJsZ3JlY2R3LXMzbDcwd3BseTd4QXBjTEIyVnluWnEzdFJiTk5GaHJldDE0UGc0OUU4eFppdXhQVU1SSzdfWkE?oc=5",
     "region": "Global"
   },
   {
